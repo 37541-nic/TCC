@@ -50,6 +50,7 @@ export default function App() {
         </section>
 
         <section className="admin-cadastro">
+          <p>Aviso: Essa funcionalidade é temporaria e para entender a organização dos produtos.</p>
           <h3>Cadastrar Novo Produto</h3>
           <form onSubmit={adicionarProduto} className="form-cadastro">
             <input 

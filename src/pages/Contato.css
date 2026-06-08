@@ -1,9 +1,56 @@
-.contato {
-  /* Contato styles */
+.aviso {
+  background-color: #FF6600;
+  color: #000000;
+  text-align: center;
+  height: 20vh;
+  align-content: center;
 }
-.avisoTest{
-  color: rgb(0, 0, 0);
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
-.aviso{
-  background: rgb(255, 115, 0);
+.grid2 {
+  background-color: #8a8a8a;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
+.h1Red {
+  color: #ED3237;
+}
+.contato1 {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  height: 200px;
+  margin-left: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.contato2 {
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.link {
+  font-size: 35px;
+  text-decoration: none;
+  color: black;
+}
+.email {
+  background-color: #ED3237;
+}
+
+
+------------------------------------
+colors
+#636363
+#ED3237
+#C0B4A9
