@@ -84,6 +84,10 @@ body {
   border-radius: 5px; 
   flex: 1; 
 }
+.input-text {
+  background: #fff;
+  color: #333;
+}
 .btn-upload { 
   background: #fff; 
   border: 1px dashed #999; 

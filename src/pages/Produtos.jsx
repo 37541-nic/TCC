@@ -10,6 +10,7 @@ export default function App() {
   // Estados para o formulário
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
+  const [valor, setValor] = useState('');
   const [imagemPreview, setImagemPreview] = useState(null);
 
   // Função para processar a imagem local
@@ -31,6 +32,7 @@ export default function App() {
       id: Date.now(),
       nome,
       descricao,
+      valor,
       imagem: imagemPreview || 'https://via.placeholder.com/150'
     };
     setProdutos([...produtos, novo]);
@@ -38,6 +40,7 @@ export default function App() {
     // Resetar formulário
     setNome('');
     setDescricao('');
+    setValor('');
     setImagemPreview(null);
   };
 
@@ -54,6 +57,7 @@ export default function App() {
           <h3>Cadastrar Novo Produto</h3>
           <form onSubmit={adicionarProduto} className="form-cadastro">
             <input 
+              className="input-text"
               type="text" 
               placeholder="Nome do produto" 
               value={nome} 
@@ -61,10 +65,19 @@ export default function App() {
               required 
             />
             <input 
+              className="input-text"
               type="text" 
-              placeholder="Descrição curta" 
+              placeholder="Descrição do produto" 
               value={descricao} 
               onChange={(e) => setDescricao(e.target.value)} 
+            />
+            <input 
+              className="input-text"
+              type="text" 
+              placeholder="Valor (R$)" 
+              value={valor} 
+              onChange={(e) => setValor(e.target.value)} 
+              required 
             />
             <label className="btn-upload">
               {imagemPreview ? "✓ Foto Carregada" : "Selecionar Imagem"}
@@ -93,6 +106,7 @@ export default function App() {
                   <div className="card-info">
                     <h4>{p.nome}</h4>
                     <p>{p.descricao}</p>
+                    <p>R$ {p.valor}</p>
                   </div>
                 </div>
               ))
